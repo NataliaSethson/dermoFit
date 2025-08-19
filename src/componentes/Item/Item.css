@@ -1,0 +1,15 @@
+
+.imgItem{
+   max-width: 100%; 
+}
+
+.cardConteiner{
+    text-align: center;
+    margin: 1px;
+    padding: 2px;    
+}
+
+.nameTitle{
+    font-size: 30px;
+    font-weight: bold ;
+}
