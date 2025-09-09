@@ -1,0 +1,12 @@
+.conteinerCount{
+  display: inline-flex;          
+  align-items: center;
+  border: 1px solid #ccc;        
+  border-radius: 8px;            
+  overflow: hidden;
+}
+.buttonAg{
+    font-size: 15px;
+    text-align: center;
+    min-width: 400px;
+}

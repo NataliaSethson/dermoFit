@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <header>
       <div>
-        <h1>
+        <h1 className='title'>
          <Link to={"/"}>DERMOFIT</Link>
         </h1>
         <CartWidget />

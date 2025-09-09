@@ -9,6 +9,7 @@ const Item = (item) => {
       <div className='cardConteiner'>
         <h2 className='nameTitle'>{item.name}</h2>
         <img src={item.img} className='imgItem' />
+        <br></br>
         <p className='precio'>
           {item.price.toLocaleString("es-AR", {
             style: "currency",

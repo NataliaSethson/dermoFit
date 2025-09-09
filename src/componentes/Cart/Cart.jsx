@@ -8,10 +8,10 @@ const Cart = () => {
   const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext)
 
 
-   const navigate = useNavigate(); // <-- HOOK dentro del componente
+   const navigate = useNavigate(); 
   useEffect(() => {
     if (cart.length === 0) {
-      navigate("/"); // <-- HOOK usado correctamente
+      navigate("/");
     }
   }, [cart, navigate]);
 
@@ -24,9 +24,15 @@ const Cart = () => {
         cart.map((prod) => (
 
           <div key={prod.id} className='cardConteiner'>
-            <h3 className='nameTitle'>{prod.name}</h3>
-            <img src={prod.img} alt={prod.name} className='imgItem'></img>
-            <small>Precio unitario : ${prod.price}</small>
+            <h3 className='nameCart'>{prod.name}</h3>
+            <img src={prod.img} alt={prod.name} className='imgCart'></img>
+            <small>Precio unitario: 
+              {(prod.price).toLocaleString("es-AR", {
+              style: "currency",
+              currency: "ARS",
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })}</small>
             <small>Cantidad: {prod.cantidad}</small>
             <p> Precio total:
              {(prod.price * prod.cantidad).toLocaleString("es-AR", {
@@ -46,7 +52,12 @@ const Cart = () => {
         )
       }
 
-      <p className='totalCompra'>Total compra :${totalCompra()}</p>
+      <p className='totalCompra'>Total compra :{(totalCompra()).toLocaleString("es-AR", {
+              style: "currency",
+              currency: "ARS",
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })}</p>
       <br></br>
       <div className="botonesCart">
         <button onClick={vaciarCarrito} className='btn btn-danger'>VACIAR CARRITO</button>

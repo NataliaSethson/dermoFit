@@ -1,6 +1,11 @@
 
 .imgItem{
-   max-width: 100%; 
+   max-width: 50%; 
+   border-radius: 5px;
+   
+}
+.imgItem:hover{
+    transform: scale(1.1);
 }
 
 .cardConteiner{
@@ -9,7 +14,11 @@
     padding: 2px;    
 }
 
-.nameTitle{
+h2.nameTitle{
     font-size: 30px;
     font-weight: bold ;
+}
+.precio{
+    font-weight: bolder;
+    font-size: 17px;
 }

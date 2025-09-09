@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom"
 import Counter from "../Counter/Counter"
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
+import Button from 'react-bootstrap/Button';
+import './ItemDetail.css'
 
 
 const ItemDetail = ({ item }) => {
@@ -24,10 +26,11 @@ const ItemDetail = ({ item }) => {
       return (
 
             <div className="cardConteiner">
-                  <img className='imgItem' src={item.img} alt={item.name} />
-                  <h3 className='nameTitle'>{item.name}</h3>
+                  <img className='imgDetail' src={item.img} alt={item.name} />
+                  <h3 className='nameDetail'>{item.name}</h3>
                   <p className='description'>{item.description}</p>
-                  <p className='price'>Precio:{item.price.toLocaleString("es-AR", {
+                  <p className='price'>
+                        Precio:{item.price.toLocaleString("es-AR", {
                         style: "currency",
                         currency: "ARS",
                         minimumFractionDigits: 0,
@@ -48,8 +51,8 @@ const ItemDetail = ({ item }) => {
                   }
 
                   <br></br>
-
-                  <button className="btn btn-dark" onClick={handleVolver}> VOLVER</button>
+   
+                 <Button variant="outline-secondary"  onClick={handleVolver}>VOLVER</Button>
 
 
             </div>

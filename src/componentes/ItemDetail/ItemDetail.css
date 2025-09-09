@@ -1,0 +1,13 @@
+.imgDetail{
+    max-width: 40%; 
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-radius: 7px;
+}
+.price{
+    font-weight: lighter;
+    font-size: 25px;
+}
+.nameDetail{
+    font-size: 30px;
+}
