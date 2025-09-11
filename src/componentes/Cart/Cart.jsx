@@ -26,7 +26,7 @@ const Cart = () => {
           <div key={prod.id} className='cardConteiner'>
             <h3 className='nameCart'>{prod.name}</h3>
             <img src={prod.img} alt={prod.name} className='imgCart'></img>
-            <small>Precio unitario: 
+            <small className='priceUni'>Precio unitario: 
               {(prod.price).toLocaleString("es-AR", {
               style: "currency",
               currency: "ARS",
@@ -34,7 +34,7 @@ const Cart = () => {
               maximumFractionDigits: 0,
             })}</small>
             <small>Cantidad: {prod.cantidad}</small>
-            <p> Precio total:
+            <p className='priceTot'> Precio total:
              {(prod.price * prod.cantidad).toLocaleString("es-AR", {
               style: "currency",
               currency: "ARS",
@@ -52,7 +52,8 @@ const Cart = () => {
         )
       }
 
-      <p className='totalCompra'>Total compra :{(totalCompra()).toLocaleString("es-AR", {
+      <p className='totalCompra'>
+              Total compra :{(totalCompra()).toLocaleString("es-AR", {
               style: "currency",
               currency: "ARS",
               minimumFractionDigits: 0,

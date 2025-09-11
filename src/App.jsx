@@ -7,6 +7,7 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import { CartProvider } from './context/CartContext';
 import Cart from './componentes/Cart/Cart';
 import CheckOut from './componentes/CheckOut/CheckOut';
+import Footer from './componentes/Footer/Footer';
 
 
 
@@ -27,6 +28,7 @@ function App() {
     <Route path='/checkOut'element ={<CheckOut/>}/>
     <Route path='*' element={<Navigate to="/"/>} />
      </Routes>
+    <Footer></Footer>
     </CartProvider>
      
     

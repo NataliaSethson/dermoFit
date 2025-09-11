@@ -27,11 +27,10 @@
     
 }
 .totalCompra{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder ;
     text-align: center;
     margin-top: 20px;
-    background-color:rgb(148, 122, 88)
 }
 .botonesCart{
     display: flex;
@@ -39,4 +38,13 @@
     gap: 15px;
     margin-top: 20px;
     margin-bottom: 22px;
+}
+.priceUni{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.priceTot{
+    font-size: 20px;
 }
