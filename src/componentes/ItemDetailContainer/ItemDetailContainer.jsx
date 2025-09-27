@@ -8,39 +8,36 @@ import SpinnerComponent from '../SpinnerComponent/SpinnerComponent'
 
 const ItemDetailContainer = () => {
 
-  const[item,setItem]=useState(null)
-  const[loading,setLoading]=useState(true)
+  const [item, setItem] = useState(null)
+  const [loading, setLoading] = useState(true)
 
-  const{ itemId }= useParams()
+  const { itemId } = useParams()
 
-   useEffect(()=>{
+  useEffect(() => {
     setLoading(true)
-    
-    const docRef = doc (db, "catálogo", itemId )
-    getDoc ( docRef )
-   .then ((doc)=>{
-     setItem({
-      ...doc.data(),
-      id:doc.id
-    })
-   
-    
-    
-    
-  })
 
-  .finally(()=> setLoading(false))
-    
-  },[])
-    
+    const docRef = doc(db, "catálogo", itemId)
+    getDoc(docRef)
+      .then((doc) => {
+        setItem({
+          ...doc.data(),
+          id: doc.id
+        })
+
+      })
+
+      .finally(() => setLoading(false))
+
+  }, [])
+
 
   return (
     <div>
       {
         loading
-        ? <SpinnerComponent/>
-        : <ItemDetail item={item}/>
-        
+          ? <SpinnerComponent />
+          : <ItemDetail item={item} />
+
       }
     </div>
   )

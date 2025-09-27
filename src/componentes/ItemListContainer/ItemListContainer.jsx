@@ -26,7 +26,7 @@ const ItemListContainer = () => {
 
       return {...doc.data(), id : doc.id }
     })
-    console.log(docs);
+
     setProductos(docs)
 
     
