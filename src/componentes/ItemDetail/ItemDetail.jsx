@@ -31,11 +31,11 @@ const ItemDetail = ({ item }) => {
                   <p className='description'>{item.description}</p>
                   <p className='price'>
                         Precio:{item.price.toLocaleString("es-AR", {
-                        style: "currency",
-                        currency: "ARS",
-                        minimumFractionDigits: 0,
-                        maximumFractionDigits: 0,
-                  })}</p>
+                              style: "currency",
+                              currency: "ARS",
+                              minimumFractionDigits: 0,
+                              maximumFractionDigits: 0,
+                        })}</p>
                   <br></br>
 
 
@@ -51,8 +51,8 @@ const ItemDetail = ({ item }) => {
                   }
 
                   <br></br>
-   
-                 <Button variant="outline-secondary"  onClick={handleVolver}>VOLVER</Button>
+
+                  <Button variant="outline-secondary" onClick={handleVolver}>VOLVER</Button>
 
 
             </div>

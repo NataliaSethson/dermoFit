@@ -7,7 +7,9 @@ const NavBar = () => {
     <header>
       <div>
         <h1 className='title'>
-         <Link to={"/"}>DERMOFIT</Link>
+          <Link to={"/"}>
+          <img src='./Dermofit.png' className='logo' alt=''/>
+          </Link>
         </h1>
         <CartWidget />
       </div>
@@ -25,7 +27,7 @@ const NavBar = () => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
 export default NavBar;

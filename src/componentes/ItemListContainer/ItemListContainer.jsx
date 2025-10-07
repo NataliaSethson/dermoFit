@@ -6,33 +6,33 @@ import { db } from "../../firebase/config"
 
 
 const ItemListContainer = () => {
-  const {categoryId}= useParams()
-  
+  const { categoryId } = useParams()
+
   const [productos, setProductos] = useState([])
-  const [loading, setLoading]= useState( true)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setLoading(true)
 
-  const productosRef = collection (db, "catálogo")
-  const q = categoryId
-  ? query (productosRef,where("category","==", categoryId))
-  : productosRef
+    const productosRef = collection(db, "catálogo")
+    const q = categoryId
+      ? query(productosRef, where("category", "==", categoryId))
+      : productosRef
 
-   
-  getDocs(q)
-  .then ((resp)=>{
-   const docs = resp.docs.map((doc)=>{
 
-      return {...doc.data(), id : doc.id }
-    })
+    getDocs(q)
+      .then((resp) => {
+        const docs = resp.docs.map((doc) => {
 
-    setProductos(docs)
+          return { ...doc.data(), id: doc.id }
+        })
 
-    
-  })
+        setProductos(docs)
 
-   .finally (false)
+
+      })
+
+      .finally(false)
 
   }, [categoryId])
 

@@ -26,10 +26,7 @@ const CheckOut = () => {
     const { cart, totalCompra, vaciarCarrito } = useContext(CartContext)
     const [orderId, setOrderId] = useState(null)
 
-
-
     const handleSubmit = (values) => {
-        console.log("Formulario enviado", values);
 
         const orden = {
             cliente: values,
@@ -38,7 +35,6 @@ const CheckOut = () => {
             fecha: new Date()
         }
 
-        console.log("Submit", orden);
 
         const ordersRef = collection(db, 'orders')
         addDoc(ordersRef, orden)
@@ -60,7 +56,7 @@ const CheckOut = () => {
             <div className='container my-5 text-center'>
                 <h4 className='numberOrd'>Número de orden generada: {orderId} </h4>
                 <div className='returnHome'>
-                <Link className='btn btn-dark' to={"/"}>VOLVER AL INICIO</Link>
+                    <Link className='btn btn-dark' to={"/"}>VOLVER AL INICIO</Link>
                 </div>
             </div>
         )
@@ -117,8 +113,8 @@ const CheckOut = () => {
                     </form>
                 )}
             </Formik>
-           
-          
+
+
         </div>
     )
 }
