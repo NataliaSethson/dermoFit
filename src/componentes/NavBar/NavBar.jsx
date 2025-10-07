@@ -1,4 +1,4 @@
-import CartWidget from '../CartWidget/CartWidget';
+
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 
@@ -8,10 +8,9 @@ const NavBar = () => {
       <div>
         <h1 className='title'>
           <Link to={"/"}>
-          <img src='./Dermofit.png' className='logo' alt=''/>
+            <img src='./Dermofit.png' className='logo' alt='' />
           </Link>
         </h1>
-        <CartWidget />
       </div>
       <nav>
         <ul>

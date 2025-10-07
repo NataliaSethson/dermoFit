@@ -17,11 +17,11 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar></NavBar>
+          <Cart></Cart>
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/items/:categoryId' element={<ItemListContainer />} />
             <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
-            <Route path='/cart' element={<Cart />} />
             <Route path='/checkOut' element={<CheckOut />} />
             <Route path='*' element={<Navigate to="/" />} />
           </Routes>
