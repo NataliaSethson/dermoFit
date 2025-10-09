@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBatcpVKQDTP01AfPr5ESZecywOLywR8XM",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY ,
   authDomain: "dermofiit.firebaseapp.com",
   projectId: "dermofiit",
   storageBucket: "dermofiit.firebasestorage.app",
