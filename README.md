@@ -58,11 +58,11 @@ dermofit/
 
 npm install
 
-3. **Configurar Firebase**
+3. ## ⚙️ Configurar Firebase
 
-Crea un archivo src/firebase/config.js y agrega tu configuración:
+Crea un archivo `src/firebase/config.js` y agrega tu configuración:
 
-
+```javascript
 export const firebaseConfig = {
   apiKey: "TU_API_KEY",
   authDomain: "TU_AUTH_DOMAIN",
@@ -73,15 +73,20 @@ export const firebaseConfig = {
 };
 
 
-4. **Ejecutar el proyecto**
+
+4. **🚀 Ejecutar el proyecto**
 
 
 npm run dev
 
 
-5. **Abre en tu navegador 👉 http://localhost:5173**
+5. **🌐 Abrir en el navegador**  
+   [http://localhost:5173](http://localhost:5173)
 
-🧠 **Futuras mejoras**
+
+
+
+**🧠 Futuras mejoras**
 
  -Autenticación de usuarios con Firebase Auth
 
@@ -92,7 +97,7 @@ npm run dev
  -Filtros y búsqueda avanzada de productos
 
 
-💌 **Contacto**
+**💌 Contacto**
 
 **Autora: Natalia Sethson**
 📧 [nataliasethson@live.com.ar]
