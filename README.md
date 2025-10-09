@@ -74,19 +74,19 @@ export const firebaseConfig = {
 
 
 
-4. **🚀 Ejecutar el proyecto**
+4. ## 🚀 Ejecutar el proyecto
 
 
 npm run dev
 
 
-5. **🌐 Abrir en el navegador**  
+5. ## 🌐 Abrir en el navegador 
    [http://localhost:5173](http://localhost:5173)
 
 
 
 
-**🧠 Futuras mejoras**
+ ## 🧠 Futuras mejoras
 
  -Autenticación de usuarios con Firebase Auth
 
@@ -97,9 +97,9 @@ npm run dev
  -Filtros y búsqueda avanzada de productos
 
 
-**💌 Contacto**
+ ## 💌 Contacto
 
-**Autora: Natalia Sethson**
+ Autora: Natalia Sethson
 📧 [nataliasethson@live.com.ar]
 
 
