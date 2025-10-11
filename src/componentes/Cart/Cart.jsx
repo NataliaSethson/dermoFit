@@ -27,7 +27,11 @@ const Cart = () => {
         {cart.length === 0 ? (
           <div className="empty-cart">
             <p>Tu carrito está vacío 🛒</p>
-            <Link to="/" className="btn btn-dark">
+            <Link
+              to="/"
+              className="btn btn-dark"
+              onClick={() => setIsOpen(false)}
+            >
               VOLVÉ A COMPRAR
             </Link>
           </div>
@@ -71,7 +75,13 @@ const Cart = () => {
 
             <div className="botonesCart">
               <button onClick={vaciarCarrito} className='btn btn-danger'>VACIAR CARRITO</button>
-              <Link className='btn btn-dark' to={"/CheckOut"}>TERMINAR COMPRA</Link>
+              <Link
+                className='btn btn-dark'
+                to={"/CheckOut"}
+                onClick={() => setIsOpen(false)}
+              >
+                TERMINAR COMPRA
+              </Link>
             </div>
           </>
         )}

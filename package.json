@@ -14,9 +14,12 @@
     "@emotion/styled": "^11.14.1",
     "@mui/system": "^7.2.0",
     "bootstrap": "^5.3.5",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "firebase": "^11.9.1",
     "formik": "^2.4.6",
+    "mercadopago": "^2.9.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
@@ -35,5 +38,18 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-  }
+  },
+  "description": "**Dermofit** es una **simulación de un comercio electrónico** desarrollada con **React**, **CSS3** y **JavaScript**.   El proyecto permite visualizar productos, realizar compras simuladas y gestionar órdenes, integrando una base de datos en tiempo real mediante **Firebase**.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://NataliaSethson@github.com/NataliaSethson/Dermofit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NataliaSethson/Dermofit/issues"
+  },
+  "homepage": "https://github.com/NataliaSethson/Dermofit#readme"
 }
