@@ -9,7 +9,7 @@ import './ItemDetail.css'
 const ItemDetail = ({ item }) => {
       const [cantidad, setCantidad] = useState(1)
       const navigate = useNavigate()
-      const { agregarAlCarrito, isInCart } = useContext(CartContext)
+      const { agregarAlCarrito, isInCart,  setIsCartOpen } = useContext(CartContext)
 
       const handleVolver = () => {
             navigate(-1)
@@ -21,6 +21,10 @@ const ItemDetail = ({ item }) => {
                   cantidad
             }
             agregarAlCarrito(newItem)
+      }
+
+      const handleTerminarCompra =()=>{
+            setIsCartOpen(true)
       }
 
       return (
@@ -41,7 +45,7 @@ const ItemDetail = ({ item }) => {
 
                   {
                         isInCart(item.id)
-                              ? <Link to={"/cart"} className="btn btn-dark"> TERMINAR MI COMPRA</Link>
+                              ? <Link to={"/cart"} className="btn btn-dark" onClick={handleTerminarCompra}> TERMINAR MI COMPRA</Link>
                               : <Counter
                                     max={item.stock}
                                     cantidad={cantidad}
