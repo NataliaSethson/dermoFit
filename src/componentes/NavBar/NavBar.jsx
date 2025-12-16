@@ -8,7 +8,7 @@ const NavBar = () => {
       <div>
         <h1 className='title'>
           <Link to={"/"}>
-            <img src='./Dermofit.png' className='logo' alt='' />
+            <img src='/log.png' className='logo' alt='' />
           </Link>
         </h1>
       </div>
@@ -22,6 +22,9 @@ const NavBar = () => {
           </li>
           <li>
             <Link to='/items/servicios'>SERVICIOS</Link>
+          </li>
+           <li>
+            <Link to='/nosotros'>NOSOTROS</Link>
           </li>
         </ul>
       </nav>

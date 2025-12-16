@@ -5,17 +5,17 @@ import { BsCartXFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext);
+  const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito, totalCantidad } = useContext(CartContext);
   const [isOpen, setIsOpen] = useState(false);
-
 
 
   return (
     <>
 
       <button className="cart-toggle-btn" onClick={() => setIsOpen(true)}>
-        🛒 Carrito ({cart.length})
+        🛒 Carrito ({totalCantidad()})
       </button>
+
 
       <div className={`overlay ${isOpen ? 'show' : ''}`} onClick={() => setIsOpen(false)}></div>
 

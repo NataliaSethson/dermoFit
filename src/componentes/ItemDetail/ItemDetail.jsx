@@ -9,7 +9,7 @@ import './ItemDetail.css'
 const ItemDetail = ({ item }) => {
       const [cantidad, setCantidad] = useState(1)
       const navigate = useNavigate()
-      const { agregarAlCarrito, isInCart,  setIsCartOpen } = useContext(CartContext)
+      const { agregarAlCarrito, isInCart, setIsCartOpen } = useContext(CartContext)
 
       const handleVolver = () => {
             navigate(-1)
@@ -23,14 +23,16 @@ const ItemDetail = ({ item }) => {
             agregarAlCarrito(newItem)
       }
 
-      const handleTerminarCompra =()=>{
+      const handleTerminarCompra = () => {
             setIsCartOpen(true)
       }
 
       return (
 
-            <div className="cardConteiner">
-                  <img className='imgDetail' src={item.img} alt={item.name} />
+            <div className="cardConteinerDetail">
+                  <div className="imgdDetailConteiner">
+                        <img className='imgDetail' src={item.img} alt={item.name} />
+                  </div>
                   <h3 className='nameDetail'>{item.name}</h3>
                   <p className='description'>{item.description}</p>
                   <p className='price'>
@@ -54,9 +56,9 @@ const ItemDetail = ({ item }) => {
 
                   }
 
-                  <br></br>
-
-                  <Button variant="outline-secondary" onClick={handleVolver}>VOLVER</Button>
+                  <div className="volverContentDetail">
+                        <Button variant="outline-secondary" onClick={handleVolver} className="btnVolver">VOLVER</Button>
+                  </div>
 
 
             </div>

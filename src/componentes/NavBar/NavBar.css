@@ -21,26 +21,31 @@ a{
 
 }
 a:hover{
-    color:  rgb(72, 64, 54);
+    color:  rgb(117, 111, 102);
     
 }
 
-h1{
-    text-align: center;
-    font-weight: bold;
-    font-size: 70px;
-    padding: 10px;
-    word-wrap: break-word;
+h1 {
+  height: 300px;
+  display: flex;
+  align-items: center;       
+  justify-content: center;    
+  padding: 10px;
+  margin: 0;
+}
 
+.logo {
+  display: block;
+  width: 600px;
+  height: auto;
+  max-height: none;
 }
-.logo{
-  width: 180px;
-  height: 180px;
-}
+
 
 
 header{
     background-color: rgb(148, 122, 88); 
+   
 }
 
 @media (max-width: 1024px) {

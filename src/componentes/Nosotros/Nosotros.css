@@ -1,0 +1,27 @@
+.trayectoria{
+    text-align: center;
+}
+.nosotros5{
+    font-size: 28px;
+    font-weight: lighter;
+    margin: 90px 40px 70px 40px;
+}
+
+.nosotrosExperiencia{
+    font-size: 29px;
+    font-weight: lighter;
+    margin: 70px 40px 70px 40px;
+}
+
+.imgNosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.imgServ img {
+    max-width: 100%;
+    height: auto;
+}

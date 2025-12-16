@@ -1,13 +1,41 @@
-.imgDetail{
-    max-width: 40%; 
+.imgDetail {
+    max-width: 40%;
     margin-top: 15px;
     margin-bottom: 30px;
     border-radius: 7px;
 }
-.price{
+
+.imgdDetailConteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
     font-weight: lighter;
     font-size: 25px;
 }
-.nameDetail{
+
+.nameDetail {
     font-size: 30px;
+}
+
+.btnVolver {
+    margin-top: 15px;
+    width: fit-content;
+}
+
+.volverContentDetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardConteinerDetail {
+    text-align: center;
+    margin: 15px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }

@@ -1,11 +1,10 @@
 .footerContainer{
      background-color: rgb(148, 122, 88); 
-     padding: 3px;
-     margin-top: 10px;
+     padding: 10px;
 
 }
 .copyright{
     text-align: center;
-    font-size: 10px;
+    font-size: 20px;
     margin-top: 5px;
 }
