@@ -18,6 +18,10 @@
     margin-top: 20px;
 }
 
+.priceNumber {
+    font-weight: lighter;
+}
+
 .nameDetail {
     font-size: 40px;
 }
@@ -48,11 +52,11 @@
 }
 
 .terminarCompraButton {
-  display: inline-block !important;
-  width: fit-content !important;
-  padding: 0.6rem 1.4rem !important;
-  margin: 15px auto !important;
-  font-size: 15px;
+    display: inline-block !important;
+    width: fit-content !important;
+    padding: 0.6rem 1.4rem !important;
+    margin: 15px auto !important;
+    font-size: 15px;
 }
 
 

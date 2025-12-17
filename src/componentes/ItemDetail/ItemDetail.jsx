@@ -4,6 +4,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import Button from 'react-bootstrap/Button';
 import './ItemDetail.css'
+import { fontWeight } from "@mui/system";
 
 
 const ItemDetail = ({ item }) => {
@@ -35,13 +36,17 @@ const ItemDetail = ({ item }) => {
                   </div>
                   <h3 className='nameDetail'>{item.name}</h3>
                   <p className='descriptionDetail'>{item.description}</p>
-                  <p className='price'>
-                        Precio:{item.price.toLocaleString("es-AR", {
-                              style: "currency",
-                              currency: "ARS",
-                              minimumFractionDigits: 0,
-                              maximumFractionDigits: 0,
-                        })}</p>
+                  <p className="price">
+                        Precio:{" "}
+                        <span className="priceNumber">
+                              {item.price.toLocaleString("es-AR", {
+                                    style: "currency",
+                                    currency: "ARS",
+                                    minimumFractionDigits: 0,
+                                    maximumFractionDigits: 0,
+                              })}
+                        </span>
+                  </p>
                   <br></br>
 
 
