@@ -12,13 +12,29 @@
 }
 
 .price {
-    font-weight: lighter;
-    font-size: 25px;
+    font-weight: bolder;
+    font-size: 28px;
+    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 .nameDetail {
-    font-size: 30px;
+    font-size: 40px;
 }
+
+.descriptionDetail {
+    max-width: 700px;
+    margin: 25px auto 30px;
+    font-size: 23px;
+    font-weight: lighter;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    text-align: center;
+    justify-content: center;
+}
+
 
 .btnVolver {
     margin-top: 15px;
@@ -30,6 +46,15 @@
     align-items: center;
     justify-content: center;
 }
+
+.terminarCompraButton {
+  display: inline-block !important;
+  width: fit-content !important;
+  padding: 0.6rem 1.4rem !important;
+  margin: 15px auto !important;
+  font-size: 15px;
+}
+
 
 .cardConteinerDetail {
     text-align: center;

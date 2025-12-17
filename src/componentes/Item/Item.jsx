@@ -19,8 +19,9 @@ const Item = (item) => {
             maximumFractionDigits: 0,
           })}
         </p>
-
-        <Link to={`/detail/${item.id}`} className='btn btn-dark btn-lg btn-largo' >VER MÁS</Link>
+<div className='btnVerMas'>
+        <Link to={`/detail/${item.id}`} className='btn btn-dark btn-largo' >VER MÁS</Link>
+</div>
 
 
       </div>

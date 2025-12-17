@@ -34,7 +34,7 @@ const ItemDetail = ({ item }) => {
                         <img className='imgDetail' src={item.img} alt={item.name} />
                   </div>
                   <h3 className='nameDetail'>{item.name}</h3>
-                  <p className='description'>{item.description}</p>
+                  <p className='descriptionDetail'>{item.description}</p>
                   <p className='price'>
                         Precio:{item.price.toLocaleString("es-AR", {
                               style: "currency",
@@ -47,7 +47,7 @@ const ItemDetail = ({ item }) => {
 
                   {
                         isInCart(item.id)
-                              ? <Link to={"/cart"} className="btn btn-dark" onClick={handleTerminarCompra}> TERMINAR MI COMPRA</Link>
+                              ? <Link to={"/cart"} className="btn btn-dark terminarCompraButton" onClick={handleTerminarCompra}> TERMINAR MI COMPRA</Link>
                               : <Counter
                                     max={item.stock}
                                     cantidad={cantidad}
