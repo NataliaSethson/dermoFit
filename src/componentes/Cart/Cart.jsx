@@ -5,32 +5,32 @@ import { BsCartXFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito, totalCantidad } = useContext(CartContext);
-  const [isOpen, setIsOpen] = useState(false);
+  const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito, totalCantidad, isCartOpen, setIsCartOpen } = useContext(CartContext);
+
 
 
   return (
     <>
 
-      <button className="cart-toggle-btn" onClick={() => setIsOpen(true)}>
+      <button className="cart-toggle-btn" onClick={() => setIsCartOpen(true)}>
         🛒 Carrito ({totalCantidad()})
       </button>
 
 
-      <div className={`overlay ${isOpen ? 'show' : ''}`} onClick={() => setIsOpen(false)}></div>
+      <div className={`overlay ${isCartOpen ? 'show' : ''}`} onClick={() => setIsCartOpen(false)}></div>
 
 
-      <div className={`sidebar-cart ${isOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={() => setIsOpen(false)}>×</button>
+      <div className={`sidebar-cart ${isCartOpen ? 'open' : ''}`}>
+        <button className="close-btn" onClick={() => setIsCartOpen(false)}>×</button>
         <h2 className="titleContainer">TU COMPRA:</h2>
 
         {cart.length === 0 ? (
           <div className="empty-cart">
             <p>Tu carrito está vacío 🛒</p>
             <Link
-              to="/"
+              to="/items"
               className="btn btn-dark"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsCartOpen(false)}
             >
               VOLVÉ A COMPRAR
             </Link>
@@ -74,11 +74,19 @@ const Cart = () => {
             </p>
 
             <div className="botonesCart">
+              <Link
+                className="btn btn-dark"
+                to="/items"
+                onClick={() => setIsCartOpen(false)}
+              >
+                AGREGAR MÁS PRODUCTOS
+              </Link>
+
               <button onClick={vaciarCarrito} className='btn btn-danger'>VACIAR CARRITO</button>
               <Link
                 className='btn btn-dark'
                 to={"/CheckOut"}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsCartOpen(false)}
               >
                 TERMINAR COMPRA
               </Link>
