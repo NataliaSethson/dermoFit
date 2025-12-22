@@ -4,7 +4,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import Button from 'react-bootstrap/Button';
 import './ItemDetail.css'
-import { fontWeight } from "@mui/system";
+
 
 
 const ItemDetail = ({ item }) => {

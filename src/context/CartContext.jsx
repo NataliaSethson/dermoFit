@@ -1,40 +1,46 @@
-import { createContext, useState } from "react";
-
+import { createContext, useState, useMemo } from "react";
 
 export const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
-    const [isCartOpen, setIsCartOpen] = useState(false);
-
+    const [isCartOpen, setIsCartOpen] = useState(false)
 
     const agregarAlCarrito = (item) => {
-        setCart([...cart, item])
+        const cantidad = Number(item.cantidad) || 1
+
+        setCart(prevCart => {
+            if (prevCart.some(prod => prod.id === item.id)) {
+                return prevCart.map(prod =>
+                    prod.id === item.id
+                        ? { ...prod, cantidad: prod.cantidad + cantidad }
+                        : prod
+                )
+            }
+            return [...prevCart, { ...item, cantidad }]
+        })
     }
 
-    const isInCart = (id) => {
-        return cart.some((prod) => prod.id === id)
-    }
 
-    const totalCantidad = () => {
-        return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
-    }
+    const totalCantidad = cart.reduce(
+        (acc, prod) => acc + prod.cantidad,
+        0
+    )
 
-    const totalCompra = () => {
-        return cart.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
-    }
+    const totalCompra = cart.reduce(
+        (acc, prod) => acc + prod.cantidad * prod.price,
+        0
+    )
 
-    const vaciarCarrito = () => {
-        return setCart([])
-    }
 
-    const eliminarDelCarrito = (id) => {
-        return setCart(cart.filter((prod) => prod.id !== id))
-    }
+    const isInCart = (id) => cart.some(prod => prod.id === id)
 
+    const vaciarCarrito = () => setCart([])
+
+    const eliminarDelCarrito = (id) =>
+        setCart(prev => prev.filter(prod => prod.id !== id))
 
     return (
-
         <CartContext.Provider value={{
             cart,
             agregarAlCarrito,
@@ -45,13 +51,8 @@ export const CartProvider = ({ children }) => {
             eliminarDelCarrito,
             isCartOpen,
             setIsCartOpen
-
-
         }}>
-
             {children}
         </CartContext.Provider>
-
-
     )
 }

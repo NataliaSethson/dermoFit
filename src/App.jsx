@@ -10,6 +10,7 @@ import CheckOut from './componentes/CheckOut/CheckOut';
 import Footer from './componentes/Footer/Footer';
 import Inicio from './componentes/Inicio/Inicio';
 import Nosotros from './componentes/Nosotros/Nosotros';
+import Header from './componentes/Header/Header';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <div className="divContainer">
       <BrowserRouter>
         <CartProvider>
+          <Header></Header>
           <NavBar></NavBar>
           <Cart></Cart>
           <Routes>
