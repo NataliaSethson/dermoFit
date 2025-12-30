@@ -107,10 +107,10 @@ const Cart = () => {
 
                 <Link
                   className="btn btn-dark"
-                  to="/CheckOut"
+                  to="/checkout-pago" 
                   onClick={() => setIsCartOpen(false)}
                 >
-                  TERMINAR COMPRA
+                  PAGAR CON MERCADO PAGO
                 </Link>
               </div>
             </>

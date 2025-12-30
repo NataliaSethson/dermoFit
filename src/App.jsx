@@ -11,6 +11,8 @@ import Footer from './componentes/Footer/Footer';
 import Inicio from './componentes/Inicio/Inicio';
 import Nosotros from './componentes/Nosotros/Nosotros';
 import Header from './componentes/Header/Header';
+import MercadoPagoConfig from './componentes/MercadoPagoConfig/MercadoPagoConfig';
+
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
             <Route path='/nosotros' element={<Nosotros/>}/>
             <Route path='/items/:categoryId' element={<ItemListContainer />} />
             <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
+            <Route path="/checkout-pago" element={<MercadoPagoConfig/>} />
             <Route path='/checkOut' element={<CheckOut />} />
             <Route path='*' element={<Navigate to="/" />} />
           </Routes>
