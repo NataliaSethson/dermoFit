@@ -21,7 +21,7 @@ const MercadoPagoConfig = () => {
           body: JSON.stringify({
             title: "Producto DermoFit", 
             quantity: 1,
-            price: 500,
+            price: totalCompra
           }),
         });
 
