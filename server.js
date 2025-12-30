@@ -1,7 +1,10 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import { MercadoPagoConfig, Preference } from 'mercadopago';
+import {
+  MercadoPagoConfig,
+  Preference
+} from 'mercadopago';
 
 const app = express();
 app.use(cors());
@@ -24,16 +27,19 @@ app.post("/create_preference", async (req, res) => {
           currency_id: 'ARS'
         }],
         back_urls: {
-          success: "http://localhost:5180", 
-          failure: "http://localhost:5180",
-          pending: "http://localhost:5180",
+          success: "https://dermofit.netlify.app",
+          failure: "https://dermofit.netlify.app",
+          pending: "https://dermofit.netlify.app",
         },
-         auto_return: "approved",
+
+        auto_return: "approved",
       }
     });
 
     console.log("Preferencia creada exitosamente ID:", result.id);
-    res.json({ id: result.id });
+    res.json({
+      id: result.id
+    });
 
   } catch (error) {
     console.error("Error detallado de Mercado Pago:", error);
@@ -44,4 +50,5 @@ app.post("/create_preference", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Servidor corriendo en puerto 3000"));
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
