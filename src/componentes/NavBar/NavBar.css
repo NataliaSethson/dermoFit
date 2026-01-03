@@ -1,79 +1,105 @@
-nav ul{
+
+header {
+    background-color: rgb(148, 122, 88);
+}
+
+h1 {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.logo {
+    display: block;
+    width: 600px; 
+    height: auto;
+    max-height: none;
+}
+
+nav ul {
     background-color: black;
     color: white;
     display: flex;
     text-align: center;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     margin: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 10px 0; 
 }
 
- li{
+li {
     list-style: none;
-   
 }
 
-a{
+a {
     text-decoration: none;
     list-style: none;
     color: white;
-
-}
-a:hover{
-    color:  rgb(117, 111, 102);
-    
+    font-size: 18px; 
 }
 
-h1 {
-  height: 300px;
-  display: flex;
-  align-items: center;       
-  justify-content: center;    
-  padding: 10px;
-  margin: 0;
+a:hover {
+    color: rgb(117, 111, 102);
 }
 
-.logo {
-  display: block;
-  width: 600px;
-  height: auto;
-  max-height: none;
-}
-
-
-
-header{
-    background-color: rgb(148, 122, 88); 
-   
-}
 
 @media (max-width: 1024px) {
-  h1 {
-    font-size: 70px;
-  }
-  a {
-    font-size: 15px;
-  }
+    h1 {
+        height: 200px;
+    }
+
+    .logo {
+        width: 450px; 
+    }
+
+    a {
+        font-size: 16px;
+    }
 }
 
+
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: row; 
-    gap: 15px;
-  }
-   h1 {
-    font-size: 15px; 
-  }
+    h1 {
+        height: 120px; 
+        padding: 5px;
+    }
+
+    .logo {
+        width: 280px; 
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px; 
+        margin: 5px;
+        padding: 12px 5px;
+    }
+
+    a {
+        font-size: 13px; 
+    }
 }
-@media (max-width: 300px) {
-  nav ul {
-    padding: 10px;
-  }
-  h1 {
-    font-size: 10px;
-  }
-  a {
-    font-size: 10px;
-  }
+
+
+@media (max-width: 400px) {
+    h1 {
+        height: 90px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    a {
+        font-size: 11px;
+    }
 }
