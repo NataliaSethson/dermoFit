@@ -1,4 +1,3 @@
-
 import './Item.css'
 import { Link } from 'react-router-dom'
 
@@ -19,9 +18,9 @@ const Item = (item) => {
             maximumFractionDigits: 0,
           })}
         </p>
-<div className='btnVerMas'>
-        <Link to={`/detail/${item.id}`} className='btn btn-dark btn-largo' >VER MÁS</Link>
-</div>
+        <div className='btnVerMas'>
+          <Link to={`/detail/${item.id}`} className='btn btn-dark btn-largo' >VER MÁS</Link>
+        </div>
 
 
       </div>

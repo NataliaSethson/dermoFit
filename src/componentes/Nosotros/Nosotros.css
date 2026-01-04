@@ -1,19 +1,20 @@
-.trayectoria{
+.trayectoria {
     text-align: center;
 }
-.nosotros5{
+
+.nosotros5 {
     font-size: 28px;
     font-weight: lighter;
     margin: 90px 40px 70px 40px;
 }
 
-.nosotrosExperiencia{
+.nosotrosExperiencia {
     font-size: 29px;
     font-weight: lighter;
     margin: 70px 40px 70px 40px;
 }
 
-.imgNosotros{
+.imgNosotros {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +22,43 @@
     margin-bottom: 70px;
 }
 
-.imgServ img {
+
+.imgServ {
     max-width: 100%;
     height: auto;
+}
+
+
+@media (max-width: 1024px) {
+
+    .nosotros5,
+    .nosotrosExperiencia {
+        font-size: 24px;
+        margin: 50px 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nosotros5 {
+        font-size: 18px;
+        margin: 40px 20px;
+        line-height: 1.5;
+    }
+
+    .nosotrosExperiencia {
+        font-size: 19px;
+        margin: 30px 20px;
+        line-height: 1.5;
+    }
+
+    .imgNosotros {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    .imgServ {
+        width: 100%;
+    }
 }

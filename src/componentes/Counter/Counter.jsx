@@ -15,9 +15,9 @@ const Counter = ({ cantidad, setCantidad, max, handleAgregar }) => {
   return (
     <div>
       <div className='conteinerCount'>
-        <button onClick={handleSumar} className='btn btn-dark'>+</button>
-        <span className='mx-5'>{cantidad}</span>
         <button onClick={handleRestar} className='btn btn-dark'>-</button>
+        <span className='mx-5'>{cantidad}</span>
+        <button onClick={handleSumar} className='btn btn-dark'>+</button>
       </div>
       <br></br>
       <br></br>

@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../firebase/config'
-import Spinner from 'react-bootstrap/Spinner';
 import SpinnerComponent from '../SpinnerComponent/SpinnerComponent'
 
 const ItemDetailContainer = () => {

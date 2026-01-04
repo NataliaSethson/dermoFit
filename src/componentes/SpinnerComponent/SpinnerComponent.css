@@ -1,7 +1,42 @@
 .spinner-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
-  width: 100vw;  
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.spinner-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .spinner-container p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+  }
+
+  .spinner-border {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .spinner-container {
+    height: 100dvh;
+  }
+
+  .spinner-container p {
+    font-size: 12px;
+    margin-top: 15px;
+  }
 }

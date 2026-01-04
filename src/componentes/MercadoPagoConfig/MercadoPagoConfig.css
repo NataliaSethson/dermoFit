@@ -1,0 +1,64 @@
+/* DISEÑO PARA ESCRITORIO (Mantiene tus estilos originales) */
+.mp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mp-title {
+    font-size: 70px;
+    font-weight: lighter;
+}
+
+.mp-total {
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+.wallet-wrapper {
+    width: 700px;
+    min-height: 500px;
+}
+
+/* RESPONSIVE: TABLETS (Hasta 768px) */
+@media (max-width: 768px) {
+    .mp-container {
+        margin-top: 100px; /* Bajamos el margen superior excesivo */
+    }
+
+    .mp-title {
+        font-size: 40px; /* Tamaño más real para tablet */
+    }
+
+    .wallet-wrapper {
+        width: 90%; /* Ya no es fijo de 700px, se adapta */
+    }
+}
+
+/* RESPONSIVE: CELULARES PEQUEÑOS (Hasta 480px) */
+@media (max-width: 480px) {
+    .mp-container {
+        margin-top: 60px;
+    }
+
+    .mp-title {
+        font-size: 30px; /* Título legible en una sola línea o dos */
+        padding: 0 15px;
+    }
+
+    .mp-total {
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .wallet-wrapper {
+        width: 100%; /* Ocupa todo el ancho del celular */
+        padding: 0 10px;
+    }
+}
