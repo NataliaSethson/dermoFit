@@ -40,6 +40,27 @@ export const CartProvider = ({ children }) => {
     const eliminarDelCarrito = (id) =>
         setCart(prev => prev.filter(prod => prod.id !== id))
 
+    const restarCantidad = (id) => {
+        const nuevoCarrito = cart.map((prod) => {
+            if (prod.id === id) {
+                return { ...prod, cantidad: prod.cantidad - 1 };
+            }
+            return prod;
+        }).filter((prod) => prod.cantidad > 0);
+
+        setCart(nuevoCarrito);
+    };
+
+    const sumarUnidad = (id) => {
+        setCart(prevCart =>
+            prevCart.map(item =>
+                item.id === id
+                    ? { ...item, cantidad: item.cantidad + 1 }
+                    : item
+            )
+        );
+    };
+
     return (
         <CartContext.Provider value={{
             cart,
@@ -50,7 +71,9 @@ export const CartProvider = ({ children }) => {
             vaciarCarrito,
             eliminarDelCarrito,
             isCartOpen,
-            setIsCartOpen
+            setIsCartOpen,
+            restarCantidad,
+            sumarUnidad
         }}>
             {children}
         </CartContext.Provider>

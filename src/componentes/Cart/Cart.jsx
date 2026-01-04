@@ -11,7 +11,9 @@ const Cart = () => {
     vaciarCarrito,
     eliminarDelCarrito,
     isCartOpen,
-    setIsCartOpen
+    setIsCartOpen,
+    restarCantidad,
+    sumarUnidad
   } = useContext(CartContext);
 
   return (
@@ -49,29 +51,35 @@ const Cart = () => {
             <div key={prod.id} className="cartConteiner">
               <h3 className="nameCart">{prod.name}</h3>
 
-              <small className="priceUni">
-                Precio unitario:{' '}
-                {prod.price.toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                  maximumFractionDigits: 0
-                })}
-              </small>
+              {/* Controles de Cantidad */}
+              <div className="quantity-controls">
+                <button
+                  className="btn-qty"
+                  onClick={() => restarCantidad(prod.id)}
+                >
+                  -
+                </button>
 
-              <small>Cantidad: {prod.cantidad}</small>
+                <span className="qty-number">{prod.cantidad}</span>
+
+                <button
+                  className="btn-qty"
+                  onClick={() => sumarUnidad(prod.id)}
+                >
+                  +
+                </button>
+              </div>
 
               <p className="priceTot">
-                Precio total:{' '}
-                {(prod.price * prod.cantidad).toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                  maximumFractionDigits: 0
+                Total: {(prod.price * prod.cantidad).toLocaleString("es-AR", {
+                  style: "currency", currency: "ARS", maximumFractionDigits: 0
                 })}
               </p>
 
               <button
                 onClick={() => eliminarDelCarrito(prod.id)}
                 className="btn btn-danger"
+                title="Eliminar todo"
               >
                 <BsCartXFill />
               </button>
@@ -107,7 +115,7 @@ const Cart = () => {
 
                 <Link
                   className="btn btn-dark"
-                  to="/checkout-pago" 
+                  to="/checkout-pago"
                   onClick={() => setIsCartOpen(false)}
                 >
                   PAGAR CON MERCADO PAGO
